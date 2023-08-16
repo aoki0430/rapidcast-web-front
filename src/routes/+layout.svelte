@@ -1,5 +1,8 @@
 <script>
-    import "../app.css";
+	import '../app.css';
 </script>
-  
-<slot />
+
+<div class="flex flex-col h-screen">
+	<div class="bg-accent1 h-3.5" />
+	<slot />
+</div>

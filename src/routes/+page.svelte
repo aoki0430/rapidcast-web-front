@@ -1,51 +1,80 @@
-<!-- ######## Script ####################################################################################-->
 <script lang="ts">
+	import rapidCast from '$lib/assets/rapidCast.png';
+	import menu from '$lib/assets/menu.png';
+	import music from '$lib/assets/music.png';
+	import coffee from '$lib/assets/coffee.png';
+	import Login from './login.svelte';
 </script>
 
-<!-- ######## MarkUp ####################################################################################-->
-<section class="bg-white dark:bg-gray-900">
-	<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-		<div class="mr-auto place-self-center lg:col-span-7">
-			<h1
-				class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+<div class="bg-main_background h-screen flex flex-col items-center">
+	<div class="h-12" />
+	<div class="space-y-4 flex flex-col items-center text-center">
+		<img class="h-32" src={rapidCast} alt="rapidCast" />
+		<p class="font-medium text-2xl text-white">収録後のコーヒーブレイクの間に</p>
+		<p class="font-medium text-2xl text-white">Podcast の音声編集が完了します</p>
+		<div class="h-4" />
+		<Login />
+	</div>
+	<div class="h-16" />
+	<!-- <p class="text-2xl border-b-accent1 border-b-2 text-white font-semibold">使用方法</p> -->
+
+	<div class="mx-auto p-8">
+		<!-- <div class="flex justify-between">		 -->
+		<div class="grid grid-cols-3 gap-16">
+			<!-- 1つ目のカード -->
+			<div
+				class="card bg-main_background border-accent1 border-4 rounded-lg shadow p-6 flex flex-col items-center"
 			>
-				Payments tool for software companies
-			</h1>
-			<p
-				class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+				<img src={menu} alt="menu" class="w-14 h-14" />
+				<h3 class="text-white text-2xl font-semibold mt-6 mb-3">STEP 1</h3>
+				<p class="text-white text-base">編集したい項目を設定</p>
+			</div>
+
+			<!-- 2つ目のカード -->
+			<div
+				class="card bg-main_background border-accent1 border-4 rounded-lg shadow p-6 flex flex-col items-center"
 			>
-				From checkout to global sales tax compliance, companies around the world use Flowbite to
-				simplify their payment stack.
-			</p>
-			<a
-				href="/login"
-				class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+				<img src={music} alt="music" class="w-14 h-14" />
+				<h3 class="text-white text-2xl font-semibold mt-6 mb-3">STEP 2</h3>
+				<p class="text-white text-base">音声ファイルをアップロード</p>
+			</div>
+
+			<!-- 3つ目のカード -->
+			<div
+				class="card bg-main_background border-accent1 border-4 rounded-lg shadow p-6 flex flex-col items-center"
 			>
-				Get started
-				<svg
-					class="w-5 h-5 ml-2 -mr-1"
-					fill="currentColor"
-					viewBox="0 0 20 20"
-					xmlns="http://www.w3.org/2000/svg"
-					><path
-						fill-rule="evenodd"
-						d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-						clip-rule="evenodd"
-					/></svg
-				>
-			</a>
-			<a
-				href="/login"
-				class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-			>
-				"Lets's start with google acount"
-			</a>
+				<img src={coffee} alt="coffee" class="w-14 h-14" />
+				<h3 class="text-white text-2xl font-semibold mt-6 mb-3">STEP 3</h3>
+				<p class="text-white text-base">休憩しながら数分待つだけ！</p>
+			</div>
 		</div>
-		<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-			<img
-				src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-				alt="mockup"
-			/>
+		<div class="h-8" />
+
+		<div class="mx-auto p-8 rounded-lg border-accent1 border-2">
+			<!-- 大きなタイトル -->
+			<h2 class="text-2xl font-semibold mb-6 text-white">設定できる項目</h2>
+
+			<!-- 3x2のマスでリスト形式の内容 -->
+			<div class="grid grid-cols-3 gap-6">
+				<div class="flex flex-col items-center">
+					<p class="text-xl text-white font-medium">・ 音量レベル</p>
+				</div>
+				<div class="flex flex-col items-center">
+					<p class="text-xl text-white font-medium">・ 無音部分カット</p>
+				</div>
+				<div class="flex flex-col items-center">
+					<p class="text-xl text-white font-medium">・ 項目3</p>
+				</div>
+				<div class="flex flex-col items-center">
+					<p class="text-xl text-white font-medium">・ 項目4</p>
+				</div>
+				<div class="flex flex-col items-center">
+					<p class="text-xl text-white font-medium">・ 項目5</p>
+				</div>
+				<div class="flex flex-col items-center">
+					<p class="text-xl text-white font-medium">・ 項目6</p>
+				</div>
+			</div>
 		</div>
 	</div>
-</section>
+</div>
